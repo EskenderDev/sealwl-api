@@ -30,7 +30,7 @@ export class UserController {
 
   @Get(':id')
   getCustomer(@Param('id') id: string): Observable<User> {
-    return this.userService.get(id);
+    return this.userService.findOne(id);
   }
 
   @Post()

@@ -16,7 +16,7 @@ export class BaseService<T extends BaseEntity, C, U>
       throwIfEmpty(() => new NotFoundException('Recursos no encontrados')),
     );
   }
-  get(id: string): Observable<T> {
+  findOne(id: string): Observable<T> {
     return from(this.baseModel.findById(id).exec()).pipe(
       throwIfEmpty(() => new NotFoundException(`Recurso ${id} no encontrado`)),
     );

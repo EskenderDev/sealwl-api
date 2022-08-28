@@ -3,9 +3,9 @@ import { ConfigModule } from '@nestjs/config';
 
 import { DatabaseModule } from './database/database.module';
 import { UserModule } from './modules/user/user.module';
-import { EventHandleService } from './utils/service/eventHandle.service';
 import { UtilsModule } from './utils/utils.module';
 import { SseModule } from './modules/sse/sse.module';
+import { AuthModule } from './modules/auth/auth.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -18,6 +18,7 @@ import configuration from './config/configuration';
     UserModule,
     UtilsModule,
     SseModule,
+    AuthModule,
   ],
 })
 export class AppModule {}

@@ -8,6 +8,8 @@ export type UserDocument = User & Document;
 export class User extends BaseEntity {
   @Prop()
   name: string;
+  @Prop()
+  password: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
