@@ -12,5 +12,8 @@ import { UtilsModule } from 'src/utils/utils.module';
   ],
   controllers: [UserController],
   providers: [UserService],
+  exports: [UserService],
 })
-export class UserModule {}
+export class UserModule {
+  construtor() {}
+}

@@ -26,7 +26,7 @@ export class BaseController<T extends BaseEntity, C, U> {
 
   @Get(':id')
   getCustomer(@Param('id') id: string): Observable<T> {
-    return this.baseService.get(id);
+    return this.baseService.findOne(id);
   }
 
   @Post()
